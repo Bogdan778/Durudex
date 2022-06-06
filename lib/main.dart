@@ -1,4 +1,4 @@
-import 'package:durudex_mobile/screens/welcome/durudex_first_screen.dart';
+import 'package:durudex_mobile/screens/auth/durudex_first_screen.dart';
 import 'package:durudex_mobile/theme/theme_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

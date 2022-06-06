@@ -1,4 +1,4 @@
-import 'package:durudex_mobile/screens/sign%20in/sign_in_screen.dart';
+import 'package:durudex_mobile/screens/auth/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
