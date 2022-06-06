@@ -1,6 +1,8 @@
-import 'package:durudex_mobile/utils/constans.dart';
-import 'package:durudex_mobile/utils/password_field.dart';
+import 'package:durudex_mobile/widgets/appbar.dart';
+import 'package:durudex_mobile/constant/constans.dart';
+import 'package:durudex_mobile/widgets/password_field.dart';
 import 'package:flutter/material.dart';
+
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -12,29 +14,13 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
-    
-    return Scaffold(
+    return const Scaffold(
       resizeToAvoidBottomInset: false,
-      
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(50.0),
-        child: AppBar(
-          leading: IconButton(
-            icon: const Icon(
-              Icons.arrow_back_ios_new_sharp,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            iconSize: 35,
-            color: const Color(0xff9104FF),
-          ),
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-        ),
+        preferredSize: Size.fromHeight(50.0),
+        child: AppBarWidget(),
       ),
-      
-      body: const LogoWidget(),
+      body: LogoWidget(),
     );
   }
 }
@@ -45,23 +31,17 @@ class LogoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children:  [
             SizedBox(
-                height: (189),
-                child: Center(
-                  child: Text(
-                    'Welcome',
-                    style: TextStyle(
-                      fontSize: 40,
-                      color: Color(0xff9104FF),
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                )),
+        height: (189),
+        child: Center(
+            child: Text(
+          'Welcome',
+          style: logoTextStyle,
+        ))),
             SizedBox(height: 10),
             _Form(),
           ],
@@ -81,7 +61,6 @@ class _Form extends StatefulWidget {
 class __FormState extends State<_Form> {
   @override
   Widget build(BuildContext context) {
-    
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40),
       child: Column(
@@ -107,7 +86,7 @@ class __FormState extends State<_Form> {
           const SizedBox(
             height: 5,
           ),
-          PasswordField(),
+          const PasswordField(),
           const SizedBox(
             height: 192,
           ),
@@ -128,14 +107,13 @@ class __FormState extends State<_Form> {
           const Center(
               child: Text(
             'Forgot password?',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700,),
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+            ),
           ))
         ],
       ),
     );
   }
-  
-  
-  }
-
-
+}

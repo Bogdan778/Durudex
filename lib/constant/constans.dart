@@ -23,3 +23,6 @@ final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
 );
 
+final logoTextStyle = TextStyle(fontSize: 40,
+            color: Color(0xff9104FF),
+            fontWeight: FontWeight.w700,);

@@ -1,8 +1,9 @@
-import 'package:durudex_mobile/screens/auth/durudex_first_screen.dart';
+import 'package:durudex_mobile/screens/auth/first_screen.dart';
 import 'package:durudex_mobile/theme/theme_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'route.dart' as route;
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,9 @@ class MyApp extends StatelessWidget {
           title: 'Durudex',
           theme: themeNotifier.isDark ? ThemeData.dark() : ThemeData.light(),
           debugShowCheckedModeBanner: false,
-          home: const FirstScreen(),
+          onGenerateRoute: route.controller,
+          initialRoute: route.first_screen,
+          
         );},
       ),
     );

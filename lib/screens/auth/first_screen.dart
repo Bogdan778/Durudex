@@ -1,9 +1,9 @@
 import 'package:durudex_mobile/screens/auth/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:durudex_mobile/route.dart' as route;
 import '../../theme/theme_model.dart';
-import '../../utils/constans.dart';
+import '../../constant/constans.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -60,7 +60,9 @@ class _FirstScreenState extends State<FirstScreen> {
                         height: 73,
                         child: ElevatedButton(
                           style: buttonStyle,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, route.sign_up_screen);
+                          },
                           child: const Text('Sign Up',
                               style: TextStyle(
                                   fontWeight: FontWeight.w700, fontSize: 27)),
@@ -73,11 +75,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         child: ElevatedButton(
                           style: buttonStyle,
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SignInScreen()),
-                            );
+                            Navigator.pushNamed(context, route.sign_in_screen);
                           },
                           child: const Text('Sign In',
                               style: TextStyle(
