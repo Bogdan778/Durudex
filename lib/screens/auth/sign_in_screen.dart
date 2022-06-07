@@ -3,7 +3,6 @@ import 'package:durudex_mobile/constant/constans.dart';
 import 'package:durudex_mobile/widgets/password_field.dart';
 import 'package:flutter/material.dart';
 
-
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
@@ -34,14 +33,14 @@ class LogoWidget extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children:  [
+          children: const [
             SizedBox(
-        height: (189),
-        child: Center(
-            child: Text(
-          'Welcome',
-          style: logoTextStyle,
-        ))),
+                height: (189),
+                child: Center(
+                    child: Text(
+                  'Welcome',
+                  style: logoTextStyle,
+                ))),
             SizedBox(height: 10),
             _Form(),
           ],
@@ -110,6 +109,7 @@ class __FormState extends State<_Form> {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w700,
+              color: Color(0xff4F506A),
             ),
           ))
         ],

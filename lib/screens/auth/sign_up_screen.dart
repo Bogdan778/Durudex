@@ -17,17 +17,58 @@ class _SignUpWidgetState extends State<SignUpWidget> {
         preferredSize: Size.fromHeight(50.0),
         child: AppBarWidget(),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-              height: 189,
-              child: Center(
-                  child: Text(
-                'Sign Up',
-                style: logoTextStyle,
-              )))
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 40),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+                height: 189,
+                child: Center(
+                    child: Text(
+                  'Sign Up',
+                  style: logoTextStyle,
+                ))),
+            const SizedBox(height: 10),
+            const Text(
+              'Username',
+              style: textStyle,
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            TextField(
+              decoration: textFieldDecoration,
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            const Text(
+              'Email',
+              style: textStyle,
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            TextField(
+              decoration: textFieldDecoration,
+            ),
+            const SizedBox(
+              height: 192,
+            ),
+            SizedBox(
+              width: 323,
+              height: 73,
+              child: ElevatedButton(
+                  style: buttonStyle,
+                  onPressed: () {},
+                  child: const Text(
+                    'Sign Up',
+                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 27),
+                  )),
+            ),
+          ],
+        ),
       ),
     );
   }

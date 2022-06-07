@@ -1,4 +1,3 @@
-import 'package:durudex_mobile/screens/auth/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:durudex_mobile/route.dart' as route;
@@ -11,8 +10,6 @@ class FirstScreen extends StatefulWidget {
   @override
   State<FirstScreen> createState() => _FirstScreenState();
 }
-
-
 
 class _FirstScreenState extends State<FirstScreen> {
   @override

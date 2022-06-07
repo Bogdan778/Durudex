@@ -1,4 +1,3 @@
-import 'package:durudex_mobile/screens/auth/first_screen.dart';
 import 'package:durudex_mobile/theme/theme_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,15 +18,15 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider<ThemeModel>(
       create: (_) => ThemeModel(),
       child: Consumer(
-        builder: (context, ThemeModel themeNotifier, child){
-        return MaterialApp(
-          title: 'Durudex',
-          theme: themeNotifier.isDark ? ThemeData.dark() : ThemeData.light(),
-          debugShowCheckedModeBanner: false,
-          onGenerateRoute: route.controller,
-          initialRoute: route.first_screen,
-          
-        );},
+        builder: (context, ThemeModel themeNotifier, child) {
+          return MaterialApp(
+            title: 'Durudex',
+            theme: themeNotifier.isDark ? ThemeData.dark() : ThemeData.light(),
+            debugShowCheckedModeBanner: false,
+            onGenerateRoute: route.controller,
+            initialRoute: route.first_screen,
+          );
+        },
       ),
     );
   }
