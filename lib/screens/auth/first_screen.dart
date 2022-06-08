@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:durudex_mobile/route.dart' as route;
 import '../../theme/theme_model.dart';
-import '../../constant/constans.dart';
+import '../../constans.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -12,6 +12,7 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
+  bool click = true;
   @override
   Widget build(BuildContext context) {
     return Consumer(
@@ -27,15 +28,23 @@ class _FirstScreenState extends State<FirstScreen> {
                 GestureDetector(
                   child: Container(
                     height: 43,
-                    child: Image.asset(
-                      'assets/icons/moon1.png',
-                      color: const Color(0xFF9104FF),
-                    ),
+                    child: click
+                        ? Image.asset(
+                            'assets/icons/moon1.png',
+                            color: const Color(0xFF9104FF),
+                          )
+                        : Image.asset(
+                            'assets/icons/NightMode.png',
+                            color: const Color(0xFF9104FF),
+                          ),
                   ),
                   onTap: () {
                     themeNotifier.isDark
                         ? themeNotifier.isDark = false
                         : themeNotifier.isDark = true;
+                    setState(() {
+                      click = !click;
+                    });
                   },
                 ),
                 Column(

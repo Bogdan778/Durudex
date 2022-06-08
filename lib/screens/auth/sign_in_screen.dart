@@ -1,5 +1,5 @@
 import 'package:durudex_mobile/widgets/appbar.dart';
-import 'package:durudex_mobile/constant/constans.dart';
+import 'package:durudex_mobile/constans.dart';
 import 'package:durudex_mobile/widgets/password_field.dart';
 import 'package:flutter/material.dart';
 

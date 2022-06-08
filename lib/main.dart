@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       child: Consumer(
         builder: (context, ThemeModel themeNotifier, child) {
           return MaterialApp(
+            
             title: 'Durudex',
             theme: themeNotifier.isDark ? ThemeData.dark() : ThemeData.light(),
             debugShowCheckedModeBanner: false,

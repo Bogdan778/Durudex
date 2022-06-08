@@ -52,6 +52,8 @@ flutter:
   assets:
     - assets/durudex-logo-full.png
     - assets/icons/moon1.png
+    - assets/icons/NightMode.png
+    - assets/icons/eye-slashed.png
     - assets/icons/eye.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -67,7 +69,7 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: assets/fonts/Montserrat-VariableFont_wght.ttf
-        
-  # 
+
+  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

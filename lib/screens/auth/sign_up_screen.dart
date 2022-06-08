@@ -1,5 +1,5 @@
 import 'package:durudex_mobile/widgets/appbar.dart';
-import 'package:durudex_mobile/constant/constans.dart';
+import 'package:durudex_mobile/constans.dart';
 import 'package:flutter/material.dart';
 
 class SignUpWidget extends StatefulWidget {
@@ -19,55 +19,57 @@ class _SignUpWidgetState extends State<SignUpWidget> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-                height: 189,
-                child: Center(
-                    child: Text(
-                  'Sign Up',
-                  style: logoTextStyle,
-                ))),
-            const SizedBox(height: 10),
-            const Text(
-              'Username',
-              style: textStyle,
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            TextField(
-              decoration: textFieldDecoration,
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const Text(
-              'Email',
-              style: textStyle,
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            TextField(
-              decoration: textFieldDecoration,
-            ),
-            const SizedBox(
-              height: 192,
-            ),
-            SizedBox(
-              width: 323,
-              height: 73,
-              child: ElevatedButton(
-                  style: buttonStyle,
-                  onPressed: () {},
-                  child: const Text(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                  height: 189,
+                  child: Center(
+                      child: Text(
                     'Sign Up',
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 27),
-                  )),
-            ),
-          ],
+                    style: logoTextStyle,
+                  ))),
+              const SizedBox(height: 10),
+              const Text(
+                'Username',
+                style: textStyle,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              TextField(
+                decoration: textFieldDecoration,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                'Email',
+                style: textStyle,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              TextField(
+                decoration: textFieldDecoration,
+              ),
+              const SizedBox(
+                height: 192,
+              ),
+              SizedBox(
+                width: 323,
+                height: 73,
+                child: ElevatedButton(
+                    style: buttonStyle,
+                    onPressed: () {},
+                    child: const Text(
+                      'Sign Up',
+                      style: TextStyle(fontWeight: FontWeight.w700, fontSize: 27),
+                    )),
+              ),
+            ],
+          ),
         ),
       ),
     );

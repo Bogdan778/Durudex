@@ -9,6 +9,7 @@ class PasswordField extends StatefulWidget {
 
 class _PasswordFieldState extends State<PasswordField> {
   bool isHiddenPassword = true;
+  bool click = true;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -25,15 +26,23 @@ class _PasswordFieldState extends State<PasswordField> {
                   style: BorderStyle.solid)),
           contentPadding: const EdgeInsets.all(20),
           hintText: 'Placeholder',
-          suffixIcon: InkWell(
-            onTap: _togglePasswordView,
-            child: Image.asset(
-              'assets/icons/eye.png',
-            ),
+          suffixIcon: GestureDetector(
+            onTap: () {
+              _togglePasswordView();
+              setState(() {
+                click = !click;
+              });
+            },
+            child: click
+                ? Image.asset(
+                    'assets/icons/eye.png',
+                  )
+                : Image.asset('assets/icons/eye-slashed.png'),
           )),
       obscureText: isHiddenPassword,
     );
   }
+
   void _togglePasswordView() {
     // if (isHiddenPassword == true) {
     //   isHiddenPassword = false;
@@ -41,8 +50,6 @@ class _PasswordFieldState extends State<PasswordField> {
     //   isHiddenPassword = true;
     // }
     isHiddenPassword = !isHiddenPassword;
-    setState(() {
-      
-    });
+    setState(() {});
   }
 }
