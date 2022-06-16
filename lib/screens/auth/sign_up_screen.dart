@@ -1,5 +1,6 @@
 import 'package:durudex_mobile/widgets/appbar.dart';
 import 'package:durudex_mobile/constans.dart';
+import 'package:durudex_mobile/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
 class SignUpWidget extends StatefulWidget {
@@ -57,17 +58,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
               const SizedBox(
                 height: 192,
               ),
-              SizedBox(
-                width: 323,
-                height: 73,
-                child: ElevatedButton(
-                    style: buttonStyle,
-                    onPressed: () {},
-                    child: const Text(
-                      'Sign Up',
-                      style: TextStyle(fontWeight: FontWeight.w700, fontSize: 27),
-                    )),
-              ),
+              const ButtonWidget()
             ],
           ),
         ),
