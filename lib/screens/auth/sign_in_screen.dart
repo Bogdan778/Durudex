@@ -2,6 +2,7 @@ import 'package:durudex_mobile/widgets/appbar.dart';
 import 'package:durudex_mobile/constans.dart';
 import 'package:durudex_mobile/widgets/password_field.dart';
 import 'package:flutter/material.dart';
+import 'package:durudex_mobile/route.dart' as route;
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -103,13 +104,18 @@ class __FormState extends State<_Form> {
           const SizedBox(
             height: 20,
           ),
-          const Center(
-              child: Text(
-            'Forgot password?',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              color: Color(0xff4F506A),
+          Center(
+              child: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, route.forget_password);
+            },
+            child: const Text(
+              'Forgot password?',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+                color: Color(0xff4F506A),
+              ),
             ),
           ))
         ],
