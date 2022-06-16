@@ -31,8 +31,9 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^1.0.3
-  provider:
-  shared_preferences:
+  graphql_flutter: ^5.1.0
+  provider: null
+  shared_preferences: null
 
 dev_dependencies:
   flutter_lints: ^1.0.0
@@ -69,7 +70,5 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: assets/fonts/Montserrat-VariableFont_wght.ttf
-
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
