@@ -1,6 +1,6 @@
 import 'package:durudex_mobile/widgets/appbar.dart';
 import 'package:durudex_mobile/constans.dart';
-import 'package:durudex_mobile/widgets/button_widget.dart';
+import 'package:durudex_mobile/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class SignUpWidget extends StatefulWidget {

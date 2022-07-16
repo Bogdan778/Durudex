@@ -1,7 +1,7 @@
-import 'package:durudex_mobile/screens/auth/first_screen.dart';
-import 'package:durudex_mobile/screens/auth/sign_in_screen.dart';
-import 'package:durudex_mobile/screens/auth/sign_up_screen.dart';
-import 'package:durudex_mobile/screens/auth/forget_password.dart';
+import 'package:durudex_mobile/views/auth/first_screen.dart';
+import 'package:durudex_mobile/views/auth/sign_in_screen.dart';
+import 'package:durudex_mobile/views/auth/sign_up_screen.dart';
+import 'package:durudex_mobile/views/auth/forget_password.dart';
 
 import 'package:flutter/material.dart';
 
